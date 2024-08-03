@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File List</title>
+</head>
+<body>
+    <h1>업로드 파일 목록</h1>
+    <br>
+    <h2><a href = "{% url 'myapp:index'%}">홈으로</a></h2>
+    <ul>
+    {% for file in list%}
+        <li>
+            {% comment %} {{file.id}} .  {% endcomment %}
+            {% comment %} <a href = "/media/{{file.file}}" download>{{ file.title }}</a> {% endcomment %}
+            <a href = "/media/{{file.file}}" download>{{ file.title }}_Download</a>
+            <br>
+            <img src = "/media/{{file.file}}" width = '420px' height = '594px'>
+            <br>
+            <strong>Output:</strong> <pre>{{ file.output }}</pre>
+            <br>
+            <a href = "{% url 'myapp:remove' file.id%}"><button>삭제</button></a>
+            <br><br>
+            <br><br>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

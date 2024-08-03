@@ -1,0 +1,4 @@
+{"GOOGLE_API_KEY" : "Your Key",
+"prompt" : "이 파일은 포스터야 정보 요약해줘",
+"model_id" : "gemini-1.5-flash"
+}

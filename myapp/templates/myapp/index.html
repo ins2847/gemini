@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <h1>파일 업로드 실습 메인</h1>
+    <ul>
+        <li><a href = "{% url 'myapp:upload' %}">파일 올리기</a></li>
+        <li><a href = "{% url 'myapp:latest' %}">최신 파일</a></li>
+        {% comment %} <li><a href = "#">최신 파일</a></li> {% endcomment %}
+        <li><a href = "{% url 'myapp:list' %}">파일 목록</a></li>
+    </ul>
+</body>
+</html> 
